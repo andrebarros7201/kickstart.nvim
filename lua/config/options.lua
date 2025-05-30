@@ -42,3 +42,23 @@ vim.opt.listchars = {tab = '» ', trail = '·', nbsp = '␣'}
 
 -- Minimun number of screen lines to keep above or below the cursor
 vim.o.scrolloff = 10
+
+-- Enable true color support
+vim.o.termguicolors = true
+
+-- Cursor line
+vim.o.cursorline = true
+
+-- Tabs and Indentation
+vim.o.tabstop = 4          -- Number of spaces tabs count for
+vim.o.shiftwidth = 4       -- Number of spaces to use for each step of (auto)indent
+vim.o.expandtab = true     -- Use spaces instead of tabs
+
+-- Disable wrap
+vim.o.wrap = false
+
+-- Dialog asking to save file
+vim.o.confirm = true
+
+-- Preview substitutions live
+vim.o.inccommand = 'split'
