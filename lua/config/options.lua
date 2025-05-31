@@ -13,6 +13,15 @@ vim.schedule(function()
 	vim.o.clipboard = 'unnamedplus'
 end)
 
+-- Highlight text when yanking text
+vim.api.nvim_create_autocmd('TextYankPost', {
+    desc = 'Highlight when yanking text',
+    group = vim.api.nvim_create_augroup('kicktart-highlight-yank', { clear = true }),
+    callback = function()
+        vim.hl.on_yank()
+    end
+})
+
 -- Enable break indent
 vim.o.breakindent = true
 
