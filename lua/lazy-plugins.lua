@@ -14,6 +14,7 @@ require('lazy').setup {
   require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.alpha',
+  require 'kickstart.plugins.oil',
 }
 
 -- vim: ts=2 sts=2 sw=2 et
