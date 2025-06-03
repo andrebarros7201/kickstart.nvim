@@ -14,7 +14,7 @@ require('lazy').setup {
   require 'plugins.plugins.lint',
   require 'plugins.plugins.autopairs',
   require 'plugins.plugins.alpha',
-  require 'plugins.plugins.oil',
+  require 'plugins.plugins.nvim-tree',
   require 'plugins.plugins.colored-brackets',
 }
 
