@@ -16,6 +16,7 @@ require('lazy').setup {
   require 'plugins.plugins.alpha',
   require 'plugins.plugins.nvim-tree',
   require 'plugins.plugins.colored-brackets',
+  require 'plugins.plugins.tailwind-tool',
 }
 
 -- vim: ts=2 sts=2 sw=2 et
