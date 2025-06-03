@@ -1,3 +1,4 @@
+-- Clear highlighted text
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Diagnostic keymaps
