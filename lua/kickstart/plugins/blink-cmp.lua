@@ -36,6 +36,7 @@ return {
         preset = 'default',
         ['<Tab>'] = { 'select_next', 'fallback' },
         ['<S-Tab>'] = { 'select_prev', 'fallback' },
+        ['<CR>'] = { 'select_and_accept', 'fallback' },
         ['<C-space>'] = {
           function(cmp)
             cmd.show { providers = { 'snippets' } }
