@@ -17,7 +17,7 @@ end)
 vim.o.breakindent = true
 
 -- Enable preferred line length column
-vim.o.colorcolumn = '80'
+-- vim.o.colorcolumn = '80'
 
 -- Save undo history
 vim.o.undofile = true
