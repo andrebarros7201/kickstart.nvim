@@ -63,4 +63,17 @@ vim.o.confirm = true
 -- Enable termgui colors
 vim.o.termguicolors = true
 
+-- Replace diagnostic signs with W (Warning), E (Error), etc.
+local signs = {
+  Error = 'E',
+  Warn = 'W',
+  Hint = 'H',
+  Info = 'I',
+}
+
+for type, icon in pairs(signs) do
+  local hl = 'DiagnosticSign' .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = '' })
+end
+
 -- vim: ts=2 sts=2 sw=2 et

@@ -10,13 +10,13 @@ require('lazy').setup {
   require 'plugins/plugins/mini',
   require 'plugins/plugins/treesitter',
   require 'plugins.plugins.debug',
-  -- require 'plugins.plugins.indent_line',
   require 'plugins.plugins.lint',
   require 'plugins.plugins.autopairs',
   require 'plugins.plugins.alpha',
   require 'plugins.plugins.nvim-tree',
-  require 'plugins.plugins.colored-brackets',
+  require 'plugins.plugins.rainbow_brackets',
   require 'plugins.plugins.tailwind-tool',
+  require 'plugins.plugins.status_line',
 }
 
 -- vim: ts=2 sts=2 sw=2 et
