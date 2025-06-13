@@ -1,5 +1,5 @@
 require('lazy').setup {
-  'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
+  'NMAC427/guess-indent.nvim',
   require 'plugins/plugins/gitsigns',
   require 'plugins/plugins/telescope',
   require 'plugins/plugins/lspconfig',
@@ -7,7 +7,6 @@ require('lazy').setup {
   require 'plugins/plugins/blink-cmp',
   require 'plugins/plugins/colorscheme',
   require 'plugins/plugins/todo-comments',
-  require 'plugins/plugins/mini',
   require 'plugins/plugins/treesitter',
   require 'plugins.plugins.debug',
   require 'plugins.plugins.lint',
@@ -15,7 +14,6 @@ require('lazy').setup {
   require 'plugins.plugins.alpha',
   require 'plugins.plugins.nvim-tree',
   require 'plugins.plugins.rainbow_brackets',
-  require 'plugins.plugins.tailwind-tool',
   require 'plugins.plugins.status_line',
 }
 
