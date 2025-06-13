@@ -15,6 +15,7 @@ require('lazy').setup {
   require 'plugins.plugins.nvim-tree',
   require 'plugins.plugins.rainbow_brackets',
   require 'plugins.plugins.status_line',
+  require 'plugins.plugins.undotree',
 }
 
 -- vim: ts=2 sts=2 sw=2 et
