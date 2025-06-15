@@ -15,6 +15,32 @@ return {
   },
   config = function()
     require('telescope').setup {
+      defaults = {
+        layout_strategy = 'horizontal',
+        layout_config = {
+          prompt_position = 'top',
+          width = 0.8,
+          height = 0.6,
+          preview_width = 0.5,
+          horizontal = {
+            preview_cutoff = 1,
+            results_width = 0.5,
+          },
+        },
+        sorting_strategy = 'ascending',
+        prompt_prefix = '> ',
+        selection_caret = '  ',
+        entry_prefix = '',
+        multi_icon = '✔ ',
+        winblend = 0,
+
+        border = true,
+        borderchars = {
+          prompt = { '─', '│', ' ', '│', '┌', '┐', '│', '│' },
+          results = { '─', '│', '─', '│', '├', '┤', '┘', '└' },
+          preview = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
+        },
+      },
       extensions = {
         ['ui-select'] = {
           require('telescope.themes').get_dropdown(),
