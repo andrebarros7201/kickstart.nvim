@@ -24,9 +24,14 @@ return {
         opts = {},
       },
       'folke/lazydev.nvim',
+      {
+        'saghen/blink.nvim',
+        event = 'VimEnter',
+      },
     },
     --- @module 'blink.cmp'
     --- @type blink.cmp.Config
+
     opts = {
       keymap = {
         preset = 'default',
@@ -34,8 +39,8 @@ return {
         ['<S-Tab>'] = { 'select_prev', 'fallback' },
         ['<CR>'] = { 'select_and_accept', 'fallback' },
         ['<C-space>'] = {
-          function(cmp)
-            cmd.show { providers = { 'snippets' } }
+          function()
+            require('blink').cmd.show { providers = { 'snippets' } }
           end,
         },
       },

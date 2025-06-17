@@ -15,25 +15,26 @@ return {
   },
   config = function()
     require('telescope').setup {
+      extensions = {
+        ['ui-select'] = {
+          require('telescope.themes').get_dropdown(),
+        },
+      },
       defaults = {
         layout_strategy = 'horizontal',
         layout_config = {
           prompt_position = 'top',
           width = 0.8,
-          height = 0.6,
-          preview_width = 0.5,
+          height = 0.8,
           horizontal = {
-            preview_cutoff = 1,
-            results_width = 0.5,
+            preview_cutoff = 120,
           },
         },
         sorting_strategy = 'ascending',
         prompt_prefix = '> ',
         selection_caret = '  ',
         entry_prefix = '',
-        multi_icon = '✔ ',
         winblend = 0,
-
         border = true,
         borderchars = {
           prompt = { '─', '│', ' ', '│', '┌', '┐', '│', '│' },
@@ -41,19 +42,20 @@ return {
           preview = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
         },
       },
-      extensions = {
-        ['ui-select'] = {
-          require('telescope.themes').get_dropdown(),
-        },
-      },
     }
+
+    -- Enable Telescope extensions if they are installed
     pcall(require('telescope').load_extension, 'fzf')
     pcall(require('telescope').load_extension, 'ui-select')
+
+    -- Keymaps
     local builtin = require 'telescope.builtin'
     vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Find Files' })
     vim.keymap.set('n', '<leader>fs', builtin.builtin, { desc = 'Find Select Telescope' })
     vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Find by Grep' })
     vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Find Buffers' })
+
+    -- Search in current file
     vim.keymap.set('n', '<leader>sf', function()
       builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
         winblend = 10,
@@ -61,6 +63,7 @@ return {
       })
     end, { desc = 'Search In This File' })
 
+    -- Search in open buffers
     vim.keymap.set('n', '<leader>so', function()
       builtin.live_grep {
         grep_open_files = true,
